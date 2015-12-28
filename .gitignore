@@ -1,12 +1,25 @@
-*.class
+### USE WHITELIST ###
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Ignore everything
+*
+# But don't skip over subdirectories
+!*/
 
-# Package Files #
-*.jar
-*.war
-*.ear
+### FOLDERS ###
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# Recursively add everything from these directories
+!/gradle/**
+!/src/**
+# Except in this subdirectory
+/src/api/
+
+### FILES ###
+
+# And add all these files individually
+!/.gitignore
+!/build.gradle
+!/gradlew
+!/gradlew.bat
+!/LICENSE.md
+!/update.json
+!/versions.json
