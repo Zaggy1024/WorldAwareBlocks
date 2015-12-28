@@ -24,7 +24,7 @@ public class Transformer implements IClassTransformer
 			ClassReader r = new ClassReader(basicClass);
 			ClassWriter w = new ClassWriter(r, ClassWriter.COMPUTE_FRAMES);
 			
-			MaterialTransformer mt = new MaterialTransformer(name, w);
+			ClassAdapter mt = new ClassAdapter(name, w);
 			
 			try
 			{

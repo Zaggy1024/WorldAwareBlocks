@@ -12,14 +12,14 @@ import static zaggy1024.worldawareblocks.asm.Members.*;
 
 import java.util.*;
 
-public class MaterialTransformer extends ClassVisitor implements Opcodes
+public class ClassAdapter extends ClassVisitor implements Opcodes
 {
 	public Map<String, Integer> injections = new HashMap<String, Integer>();
 	public String currentInjection = null;
 	
 	private final String className;
 	
-	public MaterialTransformer(String className, ClassVisitor cv)
+	public ClassAdapter(String className, ClassVisitor cv)
 	{
 		super(ASM5, cv);
 		
